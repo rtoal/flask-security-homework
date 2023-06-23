@@ -1,6 +1,6 @@
 # Flask Homework Assignment
 
-In class we build up a trivial Flask application and demonstrated XSS, CSRF
+In class we built up a trivial Flask application and demonstrated XSS, CSRF
 and SQL injection attacks against it.
 
 This repo contains the code from the class code-along, which did patch those
@@ -23,6 +23,11 @@ can do mutual code reviews.
 3. Create a virtualenv: `python3 -m venv env`
 4. Enter the environment: `source env/bin/activate` (will be different on Windows)
 5. Install the requirements: `pip install -r requirements.txt`
-6. Run the app: `FLASK_ENV=development flask run`
+6. Run the scripts to create and populate the SQLite database:
+   ```
+   python bin/create_db.py
+   python bin/makeaccounts.py
+   ```
+7. Run the app: `FLASK_ENV=development flask run`
 
 Have fun!
