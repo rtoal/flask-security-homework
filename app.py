@@ -58,6 +58,15 @@ def details():
         user=g.user,
         account_number=account_number,
         balance=get_balance(account_number, g.user))
+    #
+    # If you instead directly return the html string instead of using
+    # render_template, you will likely be vulnerable to XSS attacks.
+    # For example, saying
+    #     return "<h1>Details for Account {account_number}</h1>"
+    # then an attacker can put <script> tags in the account number and
+    # execute arbitrary JavaScript code in the user's browser. In class
+    # we saw how to exploit this vulnerability to steal the user's
+    # auth_token cookie enabling the attacker to log in as that user.
 
 
 @app.route("/transfer", methods=["GET"])
