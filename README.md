@@ -15,3 +15,14 @@ this application as secure as you can.
 
 Find a good linter that knows about security, and find a classmate so you
 can do mutual code reviews.
+
+## Setup
+
+1. Fork this repo
+2. Clone your fork
+3. Create a virtualenv: `python3 -m venv env`
+4. Enter the environment: `source env/bin/activate` (will be different on Windows)
+5. Install the requirements: `pip install -r requirements.txt`
+6. Run the app: `FLASK_ENV=development flask run`
+
+Have fun!
